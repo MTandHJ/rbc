@@ -15,7 +15,7 @@ This project is tested under the following environment settings:
 
 ### File Structure
 
-- data: This file stroes datasets, you could overwrite the config.py in utils to specify the path.
+- data: the file stroing datasets; you could overwrite the config.py in utils to specify the path.
 - rbc
     - models: some nerual network structures
     - utils: ...
@@ -25,7 +25,7 @@ This project is tested under the following environment settings:
     - mta_pgd.py: the multi-target attack
 
 In the following, we first give the codes for training in different nerual network structures and on different datasets. 
-Then, how to evaluate these models (e.g. AdvTraing, MMC or Ours) by attack_model.py and mta_pgd.py, will be introduced.
+Then, how to evaluate these models (dvTraing, MMC and Ours) by attack_model.py and mta_pgd.py, will be introduced.
 
 ### Training
 
@@ -93,7 +93,7 @@ Ours:
 
     python train_model.py cifar10rbc deepfool train-0.1-0.01-100 tanh --stepsize 0.02 --steps 50
 
-    python mta_pgd.py cifar10rbc train-0.1-0.01-100
+    python mta_pgd.py cifar10rbc train-0.1-0.01-100 tanh
 
 
 
@@ -105,7 +105,7 @@ MMC:
 
     python train_model.py cifar10 deepfool train-0.1-0.01-100 tanh --stepsize 0.02 --steps 50
 
-    python mta_pgd.py cifar10 train-0.1-0.01-100
+    python mta_pgd.py cifar10 train-0.1-0.01-100 relu
 
 AdvTraining
 
@@ -115,6 +115,6 @@ AdvTraining
 
     python train_model.py cifar10 deepfool train-0.1-0.01-100 tanh --stepsize 0.02 --steps 50
 
-    python mta_pgd.py cifar10 train-0.1-0.01-100
+    python mta_pgd.py cifar10 train-0.1-0.01-100 relu
 
 
