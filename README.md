@@ -25,7 +25,7 @@ This project is tested under the following environment settings:
     - mta_pgd.py: the multi-target attack
 
 In the following, we first give the codes for training in different nerual network structures and on different datasets. 
-Then, how to evaluate these models (e.g. AdvTraing, MMC or Ours) by attack_model.py and mta_pgd.py.
+Then, how to evaluate these models (e.g. AdvTraing, MMC or Ours) by attack_model.py and mta_pgd.py, will be introduced.
 
 ### Training
 
