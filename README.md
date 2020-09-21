@@ -15,7 +15,7 @@ This project is tested under the following environment settings:
 
 ### File Structure
 
-- data: the file stroing datasets; you could overwrite the config.py in utils to specify the path.
+- data: the file storing datasets; you could overwrite the config.py in utils to specify the path.
 - rbc
     - models: some nerual network structures
     - utils: ...
