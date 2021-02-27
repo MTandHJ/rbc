@@ -58,24 +58,24 @@ The rest is some baisc options for training.
 Ours:
 
     python train_model.py mnisrbc pgd tanh --epsilon 0.1 --valid_stepsize 0.03333333 --valid_steps 100
-
+    
     python train_model.py cifar10rbc pgd tanh
-
+    
     python train_model.py wideresnet34rbc pgd tanh
-
+    
     python train_model.py wideresnet34rbc-100 pgd tanh
 
 
 MMC:
 
     python train_model.py mnist pgd relu --loss_func mmc --epsilon 0.1 --valid_stepsize 0.0333333 --valid_steps 100
-
+    
     python train_model.py cifar10 pgd relu --loss_func mmc
 
 AdvTraining
 
     python adv_train_model.py mnist pgd relu --epsilon 0.3 --valid_stepsize 0.0333333 --valid_steps 100
-
+    
     python adv_train_model.py cifar10 pgd relu
 
 ### Evaluation
@@ -87,34 +87,34 @@ In the following, we fix the neural network as cifar10, similar evaluation can b
 
 Ours:
 
-    python train_model.py cifar10rbc pgd train-0.1-0.01-100 tanh
-
-    python train_model.py cifar10rbc cwl2 train-0.1-0.01-100 tanh --epsilon 1 --stepsize 0.01 --steps 1000
-
-    python train_model.py cifar10rbc deepfool train-0.1-0.01-100 tanh --stepsize 0.02 --steps 50
-
+    python attack_model.py cifar10rbc pgd train-0.1-0.01-100 tanh
+    
+    python attack_model.py cifar10rbc cwl2 train-0.1-0.01-100 tanh --epsilon 1 --stepsize 0.01 --steps 1000
+    
+    python attack_model.py cifar10rbc deepfool train-0.1-0.01-100 tanh --stepsize 0.02 --steps 50
+    
     python mta_pgd.py cifar10rbc train-0.1-0.01-100 tanh
 
 
 
 MMC:
 
-    python train_model.py cifar10 pgd train-0.1-0.01-100 tanh
-
-    python train_model.py cifar10 cwl2 train-0.1-0.01-100 tanh --epsilon 1 --stepsize 0.01 --steps 1000
-
-    python train_model.py cifar10 deepfool train-0.1-0.01-100 tanh --stepsize 0.02 --steps 50
-
+    python attack_model.py cifar10 pgd train-0.1-0.01-100 tanh
+    
+    python attack_model.py cifar10 cwl2 train-0.1-0.01-100 tanh --epsilon 1 --stepsize 0.01 --steps 1000
+    
+    python attack_model.py cifar10 deepfool train-0.1-0.01-100 tanh --stepsize 0.02 --steps 50
+    
     python mta_pgd.py cifar10 train-0.1-0.01-100 relu
 
 AdvTraining
 
-    python train_model.py cifar10 pgd train-0.1-0.01-100 tanh
-
-    python train_model.py cifar10 cwl2 train-0.1-0.01-100 tanh --epsilon 1 --stepsize 0.01 --steps 1000
-
-    python train_model.py cifar10 deepfool train-0.1-0.01-100 tanh --stepsize 0.02 --steps 50
-
+    python attack_model.py cifar10 pgd train-0.1-0.01-100 tanh
+    
+    python attack_model.py cifar10 cwl2 train-0.1-0.01-100 tanh --epsilon 1 --stepsize 0.01 --steps 1000
+    
+    python attack_model.py cifar10 deepfool train-0.1-0.01-100 tanh --stepsize 0.02 --steps 50
+    
     python mta_pgd.py cifar10 train-0.1-0.01-100 relu
 
 
